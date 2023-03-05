@@ -1,0 +1,275 @@
+/*contenedor general*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Anton', sans-serif ;
+}
+ 
+/*header*/
+  
+header{
+    width: 100%;
+    height: 110px;
+    margin-top: 10px;
+    background-color:black;
+}
+
+.contenedor-header{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.logo img{
+    object-fit: cover;
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.contenedor-nav{
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.contenedor-nav #btn_menu{
+    display: none;
+}
+
+.barra-nav{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.barra-nav ul{
+    display: flex;
+}
+
+.barra-nav ul li{
+    list-style: none;
+    margin-left: 36px;
+}
+
+.barra-nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lista {
+    display:inline;
+    margin: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/*main*/
+
+
+/** La propiedad table-layout indica el algoritmo que debe utilizar el navegador para mostrar la tabla. 
+En el estándar CSS 2.1 sólo se definen dos algoritmos: automático y fijo. En el modelo de tabla fijo 
+(valor fixed ) la anchura de la tabla y de cada columna es independiente de su contenido.**/
+
+.tabla{
+    table-layout: fixed;
+    width: 50%;
+    border: 1px solid;
+    background-color: black;
+    margin: 0 auto;
+}
+
+td{
+    border: 1px solid ;
+}
+
+th{
+border: 1px solid;
+}
+
+.dias {
+    
+   font-weight: bold;
+   color: rgb(241, 148, 167);
+   font-size: 30px;
+}
+.horario {
+    font-style: oblique;
+    color: rgb(241, 140, 167);
+    text-align: center;
+    font-size: 20px;
+}
+
+.martesyjueves {
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(121, 174, 218);
+}
+
+.sabados {
+    font-weight: bold;
+    font-size: 30px; 
+    color: rgb(93, 235, 93);
+}
+.horario2 { 
+    color: rgb(121, 174, 218);
+}
+ .horario3 {
+    color: rgb(93, 235, 93);
+}
+
+
+/*footer*/
+
+.pie {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    border-bottom: 30px;
+    margin-top: 5px;
+}
+
+.datos{
+    background-color: black;
+    margin: 2px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 33%;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+  
+  .datos img{
+    width: 50px;
+    height: 50px;
+}
+
+.derechos{
+  width: 100%;
+  background-color: black;
+  margin: 3px;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.publi{
+    display: grid;
+    grid-template-rows: 1fr; 
+    row-gap: 15px;
+    margin-top: 1em;
+    gap: 5px;
+}
+
+
+.card {
+    background-color: rgb(119, 175, 212);
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 200px;
+    
+    
+}
+
+.card img{
+    width: 10%;
+   
+    
+}
+
+
+.card h1 {
+    text-align: center;
+    color: black;
+  }
+
+  .card h2 {
+    text-align: center;
+    color: black;
+  }
+
+.card2 {
+    background-color: rgb(235, 142, 219);
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 200px;
+}
+
+.card2 h1 {
+    text-align: center;
+    color: black;
+  }
+
+.card2 img{
+    width: 20%;
+    image-orientation: inherit;
+   
+    margin-top: 10px;
+   
+}
+
+/*media queris*/
+
+
+@media  (max-width: 1200px) {
+    header{
+        padding: 40px;
+}
+}
+@media  (max-width: 720px) {
+    .barra-nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: rgb(236, 232, 216);
+        width: 500px;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+}
+
+.barra-nav ul{
+flex-direction: column;
+margin-top: 40px;
+}
+
+.barra-nav ul li{
+margin-top: 30px;
+margin-left: 40px;
+}
+
+.barra-nav ul li a{
+    color: black;
+    cursor: pointer;
+}
+.tabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+}
+}
